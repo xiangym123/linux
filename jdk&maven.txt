@@ -1,0 +1,37 @@
+
+
+netstat -an | grep 1001
+netstat: 未找到命令
+yum -y install net-tools
+
+
+
+安装jdk
+ 1、解压
+   tar -zxvf jdk-8u131-linux-x64.tar.gz
+ 2、设置环境变量
+ vim /etc/profile
+在最后面添加：
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_131  
+export JRE_HOME=${JAVA_HOME}/jre  
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+export  PATH=${JAVA_HOME}/bin:$PATH
+  3、执行profile文件
+source /etc/profile
+  4、检查版本
+java -version
+
+
+安装maven
+
+
+
+
+inux 开放端口
+ 1、开放 1001 端口号只需输入命令：  
+   firewall-cmd --zone=public --add-port=1001/tcp --permanent
+ 2、然后重启防火墙：
+    firewall-cmd --reload
+
+
+

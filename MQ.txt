@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+问题
+启动RabbitMQ后，没法访问Web管理页面
+解决
+RabbitMQ安装后默认是不启动管理模块的，所以需要配置将管理模块启动 
+启动管理模块命令如下
+rabbitmqctl start_app
+rabbitmq-plugins enable rabbitmq_management
+rabbitmqctl stop

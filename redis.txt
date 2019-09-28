@@ -1,0 +1,34 @@
+$ wget http://download.redis.io/releases/redis-2.8.17.tar.gz
+$ tar xzf redis-2.8.17.tar.gz
+$ cd redis-2.8.17
+$ make
+
+
+linux CentOS7下安装redis报错 make[1]: *** [adlist.o] 错误 127。[安装gcc]  c的编译环境
+yum install cpp
+
+yum install binutils
+
+yum install glibc
+
+yum install glibc-kernheaders
+
+yum install glibc-common
+
+yum install glibc-devel
+
+yum install gcc
+yum install 
+
+
+
+redis安装zmalloc.h:50:31: 致命错误：jemalloc/jemalloc.h：没有那个文件或目录
+
+
+make MALLOC=libc
+
+
+3、报错：“cc: 错误：…/deps/hiredis/libhiredis.a：没有那个文件或目录”
+“cc: 错误：…/deps/lua/src/liblua.a：没有那个文件或目录”**
+切换  depts
+make lua hiredis linenoise
